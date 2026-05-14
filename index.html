@@ -9,145 +9,176 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "微软雅黑",sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
         body {
-            background: #f6f6f6;
-            color: #333;
-            line-height: 1.7;
+            background-color: #ffffff;
+            color: #111111;
+            line-height: 1.6;
         }
-
-        /* 导航栏样式 */
+        /* 导航栏 */
         nav {
-            background: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
             position: sticky;
             top: 0;
-            z-index: 99;
-        }
-        .nav-wrap {
-            max-width: 1200px;
-            margin: 0 auto;
+            background: white;
+            padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 18px 20px;
+            border-bottom: 1px solid #eee;
         }
         .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: #222;
+            font-size: 1.2rem;
+            font-weight: 600;
             text-decoration: none;
+            color: #111;
         }
-        .nav-menu {
+        .nav-links {
             display: flex;
-            gap: 28px;
+            gap: 2rem;
         }
-        .nav-menu a {
+        .nav-links a {
             text-decoration: none;
-            color: #555;
-            font-size: 15px;
+            color: #666;
+            font-size: 0.95rem;
         }
-        .nav-menu a:hover {
-            color: #000;
-        }
-
-        /* 头部横幅 */
-        .banner {
-            background: #fff;
-            padding: 70px 20px;
-            text-align: center;
-        }
-        .banner h1 {
-            font-size: 34px;
-            margin-bottom: 12px;
-        }
-        .banner p {
-            color: #777;
-            font-size: 16px;
+        .nav-links a:hover {
+            color: #111;
         }
 
-        /* 通用容器 */
-        .container {
+        /* 首页作品列表 */
+        .works-section {
             max-width: 1200px;
-            margin: 70px auto;
-            padding: 0 20px;
-        }
-        .sec-title {
-            font-size: 24px;
-            margin-bottom: 35px;
-            border-left: 4px solid #333;
-            padding-left: 15px;
-        }
-
-        /* 作品网格 */
-        .grid {
+            margin: 4rem auto;
+            padding: 0 5%;
             display: grid;
-            grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
-        .card {
-            background: #fff;
-            border-radius: 10px;
+        .work-card {
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.05);
-            transition: 0.3s;
+            background: #f9f9f9;
+            transition: transform 0.3s ease;
         }
-        .card:hover {
-            transform: translateY(-6px);
+        .work-card:hover {
+            transform: translateY(-5px);
         }
-        .card-img {
-            height: 180px;
+        .work-img {
+            height: 200px;
             background: #eee;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #999;
         }
-        .card-text {
-            padding: 16px;
+        .work-content {
+            padding: 1.5rem;
         }
-        .card-text h3 {
-            font-size: 16px;
-            margin-bottom: 8px;
+        .work-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
         }
-        .tag {
+        .work-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        .work-tag {
             display: inline-block;
             background: #f0f0f0;
-            padding: 3px 10px;
+            padding: 0.25rem 0.75rem;
             border-radius: 20px;
-            font-size: 12px;
-            color: #666;
-            margin-right: 5px;
+            font-size: 0.8rem;
+            color: #555;
+            margin-right: 0.5rem;
+        }
+        .view-project {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #2563eb;
+            text-decoration: none;
+            font-size: 0.9rem;
         }
 
-        /* 关于我 */
-        #about {
-            background: #fff;
-            padding: 60px 20px;
-        }
-        .about-box {
+        /* About Me 分栏排版 */
+        .about-section {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 6rem auto;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        .about-img {
+            border-radius: 8px;
+            overflow: hidden;
+            background: #eee;
+            height: 300px;
+        }
+        .about-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        .about-text {
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            color: #444;
+        }
+        .skills h3, .experience h3, .education h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+        .skill-tag {
+            background: #f0f0f0;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #444;
+        }
+        .exp-edu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .exp-item, .edu-item {
+            margin-bottom: 1.5rem;
+        }
+        .exp-item h4, .edu-item h4 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .exp-item p, .edu-item p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .exp-item .time, .edu-item .time {
+            font-size: 0.85rem;
+            color: #888;
         }
 
         /* 页脚 */
         footer {
             text-align: center;
-            padding: 40px;
+            padding: 2rem;
             color: #999;
-            font-size: 14px;
-            background: #fff;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
         }
     </style>
 </head>
 <body>
-
-<!-- 导航栏 全部已建好，后期可随便增删 -->
-<nav>
-    <div class="nav-wrap">
-        <a href="#" class="logo">婷婷视觉设计</a>
-        <div class="nav-menu">
+    <!-- 导航栏（已保留所有分类） -->
+    <nav>
+        <a href="#" class="logo">婷婷 · 视觉设计</a>
+        <div class="nav-links">
             <a href="#school">校园作品</a>
             <a href="#work">工作作品</a>
             <a href="#poster">海报设计</a>
@@ -156,100 +187,129 @@
             <a href="#about">关于我</a>
             <a href="#contact">联系我</a>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- 首页个人简介横幅 -->
-<section class="banner">
-    <h1>你好，我是婷婷 👋</h1>
-    <p>视觉传达设计 | 电商美工 · 产品视觉 · 海报创意 · AIGC视觉</p>
-</section>
-
-<!-- 校园作品板块 -->
-<section class="container" id="school">
-    <h2 class="sec-title">📚 校园作品</h2>
-    <div class="grid">
-        <div class="card">
-            <div class="card-img">作品占位</div>
-            <div class="card-text">
-                <h3>课程品牌VI设计</h3>
-                <span class="tag">校园</span>
-                <span class="tag">品牌设计</span>
+    <!-- 校园作品板块 -->
+    <section class="works-section" id="school">
+        <div class="work-card">
+            <div class="work-img">作品占位</div>
+            <div class="work-content">
+                <h3 class="work-title">课程品牌VI设计</h3>
+                <p class="work-desc">校园课程作业，包含LOGO、基础VI系统设计</p>
+                <span class="work-tag">品牌设计</span>
+                <span class="work-tag">校园作品</span>
+                <a href="#" class="view-project">View Project →</a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- 工作作品板块 -->
-<section class="container" id="work">
-    <h2 class="sec-title">💼 工作作品</h2>
-    <div class="grid">
-        <div class="card">
-            <div class="card-img">作品占位</div>
-            <div class="card-text">
-                <h3>外贸工艺品主图设计</h3>
-                <span class="tag">工作</span>
-                <span class="tag">电商设计</span>
+    <!-- 工作作品板块 -->
+    <section class="works-section" id="work">
+        <div class="work-card">
+            <div class="work-img">作品占位</div>
+            <div class="work-content">
+                <h3 class="work-title">外贸工艺品视觉主图</h3>
+                <p class="work-desc">电商主图设计，适配平台视觉规范与用户需求</p>
+                <span class="work-tag">电商设计</span>
+                <span class="work-tag">工作作品</span>
+                <a href="#" class="view-project">View Project →</a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- 海报设计板块 -->
-<section class="container" id="poster">
-    <h2 class="sec-title">🎨 海报设计</h2>
-    <div class="grid">
-        <div class="card">
-            <div class="card-img">作品占位</div>
-            <div class="card-text">
-                <h3>创意活动海报</h3>
-                <span class="tag">海报</span>
+    <!-- 海报设计板块 -->
+    <section class="works-section" id="poster">
+        <div class="work-card">
+            <div class="work-img">作品占位</div>
+            <div class="work-content">
+                <h3 class="work-title">创意活动海报</h3>
+                <p class="work-desc">商业活动海报设计，兼顾创意与信息传递</p>
+                <span class="work-tag">海报设计</span>
+                <a href="#" class="view-project">View Project →</a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- 产品设计板块 -->
-<section class="container" id="product">
-    <h2 class="sec-title">📦 产品设计</h2>
-    <div class="grid">
-        <div class="card">
-            <div class="card-img">作品占位</div>
-            <div class="card-text">
-                <h3>产品视觉造型设计</h3>
-                <span class="tag">产品</span>
+    <!-- 产品设计板块 -->
+    <section class="works-section" id="product">
+        <div class="work-card">
+            <div class="work-img>">作品占位</div>
+            <div class="work-content">
+                <h3 class="work-title">产品视觉造型设计</h3>
+                <p class="work-desc">工艺品造型视觉优化，适配生产与电商展示需求</p>
+                <span class="work-tag">产品设计</span>
+                <a href="#" class="view-project">View Project →</a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- AIGC创作板块 -->
-<section class="container" id="aigc">
-    <h2 class="sec-title">🤖 AIGC 视觉创作</h2>
-    <div class="grid">
-        <div class="card">
-            <div class="card-img">作品占位</div>
-            <div class="card-text">
-                <h3>AI人物IP形象</h3>
-                <span class="tag">AIGC</span>
+    <!-- AIGC创作板块 -->
+    <section class="works-section" id="aigc">
+        <div class="work-card">
+            <div class="work-img">作品占位</div>
+            <div class="work-content">
+                <h3 class="work-title">AIGC IP形象设计</h3>
+                <p class="work-desc">AI辅助创作的原创IP形象，包含多视图设计</p>
+                <span class="work-tag">AIGC</span>
+                <span class="work-tag">IP设计</span>
+                <a href="#" class="view-project">View Project →</a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- 关于我板块 -->
-<section id="about">
-    <div class="about-box">
-        <h2 class="sec-title">🙋 关于我</h2>
-        <p>我是婷婷，视觉传达设计专业，擅长电商美工、产品视觉、海报设计、品牌VI，日常也会用AIGC做创意视觉创作。</p>
-        <p style="margin-top:10px;color:#666;">做事细心，审美稳定，擅长把产品特点和视觉美感结合，适合电商、产品、品牌类设计工作。</p>
-    </div>
-</section>
+    <!-- About Me 分栏排版（和参考效果一致） -->
+    <section class="about-section" id="about">
+        <div class="about-img">
+            <!-- 这里可以放你的个人照片 -->
+        </div>
+        <div class="about-content">
+            <h2>About Me</h2>
+            <div class="about-text">
+                <p>我是婷婷，一名视觉传达设计专业的设计师，专注于电商美工、产品视觉与创意海报设计，同时探索AIGC在设计中的创意应用。</p>
+                <br>
+                <p>目前在工艺品公司担任产品开发设计助理，负责产品主图、详情页视觉优化与设计落地，熟悉电商平台的视觉规范与用户偏好。</p>
+            </div>
 
-<!-- 联系我 / 页脚 -->
-<footer id="contact">
-    <p>© 2026 婷婷视觉设计作品集 | 所有作品持续更新中</p>
-</footer>
+            <!-- 技能标签 -->
+            <div class="skills">
+                <h3>Skills</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">电商设计</span>
+                    <span class="skill-tag">品牌设计</span>
+                    <span class="skill-tag">海报设计</span>
+                    <span class="skill-tag">产品视觉</span>
+                    <span class="skill-tag">AIGC创作</span>
+                    <span class="skill-tag">Photoshop</span>
+                    <span class="skill-tag">Illustrator</span>
+                    <span class="skill-tag">Figma</span>
+                </div>
+            </div>
 
+            <!-- 工作经历 + 教育背景 双栏排版 -->
+            <div class="exp-edu-grid">
+                <div class="experience">
+                    <h3>Experience</h3>
+                    <div class="exp-item">
+                        <h4>产品开发设计助理</h4>
+                        <p>XX工艺品公司</p>
+                        <p class="time">202X - 至今</p>
+                    </div>
+                </div>
+                <div class="education">
+                    <h3>Education</h3>
+                    <div class="edu-item">
+                        <h4>视觉传达设计 本科</h4>
+                        <p>XX大学</p>
+                        <p class="time">20XX - 20XX</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚/联系方式 -->
+    <footer id="contact">
+        <p>© 2026 婷婷 · 视觉设计 | 联系方式：xxx@xxx.com（可选）</p>
+    </footer>
 </body>
 </html>
