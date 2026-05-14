@@ -16,7 +16,6 @@
             color: #111111;
             line-height: 1.6;
         }
-        /* 导航栏 */
         nav {
             position: sticky;
             top: 0;
@@ -26,6 +25,7 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #eee;
+            z-index: 100;
         }
         .logo {
             font-size: 1.2rem;
@@ -46,62 +46,6 @@
             color: #111;
         }
 
-        /* 首页作品列表 */
-        .works-section {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 5%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .work-card {
-            border-radius: 8px;
-            overflow: hidden;
-            background: #f9f9f9;
-            transition: transform 0.3s ease;
-        }
-        .work-card:hover {
-            transform: translateY(-5px);
-        }
-        .work-img {
-            height: 200px;
-            background: #eee;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-        }
-        .work-content {
-            padding: 1.5rem;
-        }
-        .work-title {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-        .work-desc {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 1rem;
-        }
-        .work-tag {
-            display: inline-block;
-            background: #f0f0f0;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            color: #555;
-            margin-right: 0.5rem;
-        }
-        .view-project {
-            display: inline-block;
-            margin-top: 1rem;
-            color: #2563eb;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        /* About Me 分栏排版 */
         .about-section {
             max-width: 1200px;
             margin: 6rem auto;
@@ -159,12 +103,65 @@
             font-size: 0.9rem;
             color: #666;
         }
-        .exp-item .time, .edu-item .time {
+        .time {
             font-size: 0.85rem;
             color: #888;
         }
 
-        /* 页脚 */
+        .works-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .work-card {
+            border-radius: 8px;
+            overflow: hidden;
+            background: #f9f9f9;
+            transition: transform 0.3s ease;
+        }
+        .work-card:hover {
+            transform: translateY(-5px);
+        }
+        .work-img {
+            height: 200px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+        .work-content {
+            padding: 1.5rem;
+        }
+        .work-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .work-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        .work-tag {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #555;
+            margin-right: 0.5rem;
+        }
+        .view-project {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #2563eb;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
         footer {
             text-align: center;
             padding: 2rem;
@@ -175,141 +172,125 @@
     </style>
 </head>
 <body>
-    <!-- 导航栏（已保留所有分类） -->
-    <nav>
-        <a href="#" class="logo">婷婷 · 视觉设计</a>
-        <div class="nav-links">
-            <a href="#school">校园作品</a>
-            <a href="#work">工作作品</a>
-            <a href="#poster">海报设计</a>
-            <a href="#product">产品设计</a>
-            <a href="#aigc">AIGC创作</a>
-            <a href="#about">关于我</a>
-            <a href="#contact">联系我</a>
-        </div>
-    </nav>
 
-    <!-- 校园作品板块 -->
-    <section class="works-section" id="school">
-        <div class="work-card">
-            <div class="work-img">作品占位</div>
-            <div class="work-content">
-                <h3 class="work-title">课程品牌VI设计</h3>
-                <p class="work-desc">校园课程作业，包含LOGO、基础VI系统设计</p>
-                <span class="work-tag">品牌设计</span>
-                <span class="work-tag">校园作品</span>
-                <a href="#" class="view-project">View Project →</a>
+<!-- 导航 -->
+<nav>
+    <a href="#" class="logo">婷婷 · 视觉设计</a>
+    <div class="nav-links">
+        <a href="#about">About Me</a>
+        <a href="#school">校园作品</a>
+        <a href="#work">工作作品</a>
+        <a href="#poster">海报设计</a>
+        <a href="#product">产品设计</a>
+        <a href="#aigc">AIGC创作</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- 👇 重点：About Me 放在最顶部！-->
+<section class="about-section" id="about">
+    <div class="about-img">你的照片</div>
+    <div class="about-content">
+        <h2>About Me</h2>
+        <div class="about-text">
+            <p>我是婷婷，视觉传达设计专业，专注电商美工、产品视觉、海报创意设计，同时探索AIGC视觉创作。</p>
+            <br>
+            <p>擅长将产品特点与美感结合，做事细心、审美稳定，适合电商、产品、品牌类设计工作。</p>
+        </div>
+
+        <div class="skills">
+            <h3>Skills</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">电商设计</span>
+                <span class="skill-tag">品牌设计</span>
+                <span class="skill-tag">海报设计</span>
+                <span class="skill-tag">产品视觉</span>
+                <span class="skill-tag">AIGC创作</span>
+                <span class="skill-tag">PS</span>
+                <span class="skill-tag">AI</span>
             </div>
         </div>
-    </section>
 
-    <!-- 工作作品板块 -->
-    <section class="works-section" id="work">
-        <div class="work-card">
-            <div class="work-img">作品占位</div>
-            <div class="work-content">
-                <h3 class="work-title">外贸工艺品视觉主图</h3>
-                <p class="work-desc">电商主图设计，适配平台视觉规范与用户需求</p>
-                <span class="work-tag">电商设计</span>
-                <span class="work-tag">工作作品</span>
-                <a href="#" class="view-project">View Project →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 海报设计板块 -->
-    <section class="works-section" id="poster">
-        <div class="work-card">
-            <div class="work-img">作品占位</div>
-            <div class="work-content">
-                <h3 class="work-title">创意活动海报</h3>
-                <p class="work-desc">商业活动海报设计，兼顾创意与信息传递</p>
-                <span class="work-tag">海报设计</span>
-                <a href="#" class="view-project">View Project →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 产品设计板块 -->
-    <section class="works-section" id="product">
-        <div class="work-card">
-            <div class="work-img>">作品占位</div>
-            <div class="work-content">
-                <h3 class="work-title">产品视觉造型设计</h3>
-                <p class="work-desc">工艺品造型视觉优化，适配生产与电商展示需求</p>
-                <span class="work-tag">产品设计</span>
-                <a href="#" class="view-project">View Project →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- AIGC创作板块 -->
-    <section class="works-section" id="aigc">
-        <div class="work-card">
-            <div class="work-img">作品占位</div>
-            <div class="work-content">
-                <h3 class="work-title">AIGC IP形象设计</h3>
-                <p class="work-desc">AI辅助创作的原创IP形象，包含多视图设计</p>
-                <span class="work-tag">AIGC</span>
-                <span class="work-tag">IP设计</span>
-                <a href="#" class="view-project">View Project →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Me 分栏排版（和参考效果一致） -->
-    <section class="about-section" id="about">
-        <div class="about-img">
-            <!-- 这里可以放你的个人照片 -->
-        </div>
-        <div class="about-content">
-            <h2>About Me</h2>
-            <div class="about-text">
-                <p>我是婷婷，一名视觉传达设计专业的设计师，专注于电商美工、产品视觉与创意海报设计，同时探索AIGC在设计中的创意应用。</p>
-                <br>
-                <p>目前在工艺品公司担任产品开发设计助理，负责产品主图、详情页视觉优化与设计落地，熟悉电商平台的视觉规范与用户偏好。</p>
-            </div>
-
-            <!-- 技能标签 -->
-            <div class="skills">
-                <h3>Skills</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">电商设计</span>
-                    <span class="skill-tag">品牌设计</span>
-                    <span class="skill-tag">海报设计</span>
-                    <span class="skill-tag">产品视觉</span>
-                    <span class="skill-tag">AIGC创作</span>
-                    <span class="skill-tag">Photoshop</span>
-                    <span class="skill-tag">Illustrator</span>
-                    <span class="skill-tag">Figma</span>
+        <div class="exp-edu-grid">
+            <div class="experience">
+                <h3>Experience</h3>
+                <div class="exp-item">
+                    <h4>产品开发设计助理</h4>
+                    <p>工艺品公司</p>
+                    <p class="time">2025 - 至今</p>
                 </div>
             </div>
-
-            <!-- 工作经历 + 教育背景 双栏排版 -->
-            <div class="exp-edu-grid">
-                <div class="experience">
-                    <h3>Experience</h3>
-                    <div class="exp-item">
-                        <h4>产品开发设计助理</h4>
-                        <p>XX工艺品公司</p>
-                        <p class="time">202X - 至今</p>
-                    </div>
-                </div>
-                <div class="education">
-                    <h3>Education</h3>
-                    <div class="edu-item">
-                        <h4>视觉传达设计 本科</h4>
-                        <p>XX大学</p>
-                        <p class="time">20XX - 20XX</p>
-                    </div>
+            <div class="education">
+                <h3>Education</h3>
+                <div class="edu-item">
+                    <h4>视觉传达设计 本科</h4>
+                    <p>XX大学</p>
+                    <p class="time">2022 - 2025</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- 页脚/联系方式 -->
-    <footer id="contact">
-        <p>© 2026 婷婷 · 视觉设计 | 联系方式：xxx@xxx.com（可选）</p>
-    </footer>
+<!-- 作品放在下面 -->
+<section class="works-section" id="school">
+    <div class="work-card">
+        <div class="work-img">校园作品</div>
+        <div class="work-content">
+            <h3>品牌VI设计</h3>
+            <p>课程作业，LOGO + 基础视觉系统</p>
+            <span class="work-tag">校园</span>
+        </div>
+    </div>
+</section>
+
+<section class="works-section" id="work">
+    <div class="work-card">
+        <div class="work-img">工作作品</div>
+        <div class="work-content">
+            <h3>外贸产品主图</h3>
+            <p>电商平台视觉设计</p>
+            <span class="work-tag">工作</span>
+        </div>
+    </div>
+</section>
+
+<section class="works-section" id="poster">
+    <div class="work-card">
+        <div class="work-img">海报设计</div>
+        <div class="work-content">
+            <h3>创意活动海报</h3>
+            <p>视觉传达 + 信息排版</p>
+            <span class="work-tag">海报</span>
+        </div>
+    </div>
+</section>
+
+<section class="works-section" id="product">
+    <div class="work-card">
+        <div class="work-img">产品设计</div>
+        <div class="work-content">
+            <h3>产品造型视觉</h3>
+            <p>工艺品外观优化</p>
+            <span class="work-tag">产品</span>
+        </div>
+    </div>
+</section>
+
+<section class="works-section" id="aigc">
+    <div class="work-card">
+        <div class="work-img">AIGC创作</div>
+        <div class="work-content">
+            <h3>AI IP形象</h3>
+            <p>智能生成创意角色</p>
+            <span class="work-tag">AIGC</span>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <p>© 2026 婷婷视觉设计作品集</p>
+</footer>
+
 </body>
 </html>
