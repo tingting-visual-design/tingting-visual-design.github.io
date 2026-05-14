@@ -121,6 +121,9 @@
             overflow: hidden;
             background: #f9f9f9;
             transition: transform 0.3s ease;
+            text-decoration: none;
+            display: block;
+            color: inherit;
         }
         .work-card:hover {
             transform: translateY(-5px);
@@ -154,13 +157,6 @@
             color: #555;
             margin-right: 0.5rem;
         }
-        .view-project {
-            display: inline-block;
-            margin-top: 1rem;
-            color: #2563eb;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
 
         footer {
             text-align: center;
@@ -173,7 +169,6 @@
 </head>
 <body>
 
-<!-- 导航 -->
 <nav>
     <a href="#" class="logo">婷婷 · 视觉设计</a>
     <div class="nav-links">
@@ -183,13 +178,12 @@
         <a href="#poster">海报设计</a>
         <a href="#product">产品设计</a>
         <a href="#aigc">AIGC创作</a>
-        <a href="#contact">Contact</a>
     </div>
 </nav>
 
-<!-- 👇 重点：About Me 放在最顶部！-->
+<!-- 关于我 放最前面 -->
 <section class="about-section" id="about">
-    <div class="about-img">你的照片</div>
+    <div class="about-img"></div>
     <div class="about-content">
         <h2>About Me</h2>
         <div class="about-text">
@@ -232,63 +226,67 @@
     </div>
 </section>
 
-<!-- 作品放在下面 -->
+<!-- 校园作品 可点击跳转 -->
 <section class="works-section" id="school">
-    <div class="work-card">
-        <div class="work-img">校园作品</div>
+    <a href="work1.html" class="work-card">
+        <div class="work-img">校园作品1</div>
         <div class="work-content">
-            <h3>品牌VI设计</h3>
-            <p>课程作业，LOGO + 基础视觉系统</p>
+            <h3 class="work-title">品牌VI设计</h3>
+            <p class="work-desc">课程作业，LOGO + 基础视觉系统</p>
             <span class="work-tag">校园</span>
         </div>
-    </div>
+    </a>
 </section>
 
+<!-- 工作作品 -->
 <section class="works-section" id="work">
-    <div class="work-card">
-        <div class="work-img">工作作品</div>
+    <a href="work2.html" class="work-card">
+        <div class="work-img">工作作品1</div>
         <div class="work-content">
-            <h3>外贸产品主图</h3>
-            <p>电商平台视觉设计</p>
+            <h3 class="work-title">外贸产品主图</h3>
+            <p class="work-desc">电商平台视觉设计</p>
             <span class="work-tag">工作</span>
         </div>
-    </div>
+    </a>
 </section>
 
+<!-- 海报设计 -->
 <section class="works-section" id="poster">
-    <div class="work-card">
-        <div class="work-img">海报设计</div>
+    <a href="work3.html" class="work-card">
+        <div class="work-img">海报作品1</div>
         <div class="work-content">
-            <h3>创意活动海报</h3>
-            <p>视觉传达 + 信息排版</p>
+            <h3 class="work-title">创意活动海报</h3>
+            <p class="work-desc">视觉传达 + 信息排版</p>
             <span class="work-tag">海报</span>
         </div>
-    </div>
+    </a>
 </section>
 
+<!-- 产品设计 -->
 <section class="works-section" id="product">
-    <div class="work-card">
-        <div class="work-img">产品设计</div>
+    <a href="work4.html" class="work-card">
+        <div class="work-img">产品设计1</div>
         <div class="work-content">
-            <h3>产品造型视觉</h3>
-            <p>工艺品外观优化</p>
+            <h3 class="work-title">产品造型视觉</h3>
+            <p class="work-desc">工艺品外观优化</p>
             <span class="work-tag">产品</span>
         </div>
-    </div>
+    </a>
 </section>
 
+<!-- AIGC创作 -->
 <section class="works-section" id="aigc">
-    <div class="work-card">
-        <div class="work-img">AIGC创作</div>
+    <a href="work5.html" class="work-card">
+        <div class="work-img">AIGC作品1</div>
         <div class="work-content">
-            <h3>AI IP形象</h3>
-            <p>智能生成创意角色</p>
+            <h3 class="work-title">AI IP形象</h3>
+            <p class="work-desc">智能生成创意角色</p>
             <span class="work-tag">AIGC</span>
         </div>
-    </div>
+    </a>
 </section>
 
-<footer id="contact">
+<footer>
     <p>© 2026 婷婷视觉设计作品集</p>
 </footer>
 
